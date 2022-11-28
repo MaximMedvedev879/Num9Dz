@@ -12,9 +12,9 @@
         <file>Resources/v_eps.png</file>
         <file>Resources/x_0.png</file>
         <file>Resources/x_eps.png</file>
-        <file>../../../Downloads/Numerical-Analysis-main/Numerical-Analysis-main/Lab1/NMLab/Resources/x_max.png</file>
         <file>Resources/etta.png</file>
         <file>Resources/teta.png</file>
         <file>Resources/Diffeq.png</file>
+        <file>Resources/x_max.png</file>
     </qresource>
 </RCC>
