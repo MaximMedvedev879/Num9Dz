@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/a.png</file>
+        <file>Resources/b.png</file>
+        <file>Resources/eps.png</file>
+        <file>Resources/eps_dotdot.png</file>
+        <file>Resources/h.png</file>
+        <file>Resources/Nmax.png</file>
+        <file>Resources/testTaskSolution.png</file>
+        <file>Resources/u_0.png</file>
+        <file>Resources/u'0.png</file>
+        <file>Resources/v_eps.png</file>
+        <file>Resources/x_0.png</file>
+        <file>Resources/x_eps.png</file>
+        <file>../../../Downloads/Numerical-Analysis-main/Numerical-Analysis-main/Lab1/NMLab/Resources/x_max.png</file>
+        <file>Resources/etta.png</file>
+        <file>Resources/teta.png</file>
+        <file>Resources/Diffeq.png</file>
+    </qresource>
+</RCC>
