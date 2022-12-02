@@ -50,19 +50,27 @@ private slots:
 
     void on_pushButton_2_pressed();
 
+    void on_infoButton_pressed();
+
+    void on_tableButton_pressed();
+
 private:
     Ui::MainWindow *ui;
 
-    QWidget *solutionInfo;
-    QLabel  *solutionInfoLabel;
+    QWidget *solutionInfo,
+            *progInfo,
+            *tableInfo;
+    QLabel  *solutionInfoLabel,
+            *progInfoLabel,
+            *tableInfoLabel;
 
     bool isSolvedOnce = false;
 
     void initializeOutputInfoWidget(QWidget *parent, QLabel *label); //форматирование справки о приложении
     void initializePlotWidget(QCustomPlot *plotWidget); //форматирование виджетов с графиками
     void initializeTable(QTableView *table, size_t rows); //инициализация таблиц (передача моделей в них)
-    bool checkInput(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &,
-                    double &, double &, double &, double &, double &, double &, double &);
+    bool checkInput(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &,
+                    double &, double &, double &, double &, double &, int&, double &, double &);
 };
 
 #endif // MAINWINDOW_H

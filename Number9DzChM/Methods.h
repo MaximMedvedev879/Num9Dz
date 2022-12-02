@@ -113,15 +113,17 @@ struct Method {
 
 // Общий вид метода с регулировкой шага
 template <typename value_t, size_t dim>
-std::vector<Entry<value_t, dim>> ivp_step_adjust (const Method<value_t, dim> &method,
+std::pair<std::vector<Entry<value_t, dim>>, int> ivp_step_adjust (const Method<value_t, dim> &method,
                                                   const Diff_equation<value_t, dim> &F,
                                                   const double x0,
                                                   const value_t &u0,
                                                   double h,
                                                   const double x_max,
                                                   const double x_eps,
-                                                  const double v_eps){
-
+                                                  const double v_eps,
+                                                  int nmax = 10000)
+{
+    int iteration = 0;
     int plus_count = 0;
     int minus_count = 0;
 
@@ -135,7 +137,7 @@ std::vector<Entry<value_t, dim>> ivp_step_adjust (const Method<value_t, dim> &me
     std::vector<Entry<value_t, dim>> soln;
     soln.push_back({x0,u0,u0,0.0,h,0,0});
 
-    while (x < x_max - x_eps) {
+    while (iteration < nmax && x < x_max - x_eps) {
         v_half = method.next_point(x + h_half, method.next_point(x, v, F, h_half), F, h_half);
         v_next = method.next_point(x, v, F, h);
         s      = method.s_mult * dist(v_half, v_next);
@@ -168,10 +170,15 @@ std::vector<Entry<value_t, dim>> ivp_step_adjust (const Method<value_t, dim> &me
             }
         }
 
-
+        ++iteration;
     }
 
-    return soln;
+    for (size_t i = soln.size()-1; i > 0; --i) {
+        soln[i].c_plus  = soln[i-1].c_plus;
+        soln[i].c_minus = soln[i-1].c_minus;
+    }
+
+    return {soln, iteration};
 }
 
 ////////////////////////////////////////////////////////////////////////////////////

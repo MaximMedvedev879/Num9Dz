@@ -27,7 +27,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    Resources/etta.png \
     Resources/Дифур.png
 
 RESOURCES += \
