@@ -54,6 +54,8 @@ private slots:
 
     void on_tableButton_pressed();
 
+    void on_clearButton_pressed();
+
 private:
     Ui::MainWindow *ui;
 
@@ -65,6 +67,7 @@ private:
             *tableInfoLabel;
 
     bool isSolvedOnce = false;
+    size_t graphCount = 0;
 
     void initializeOutputInfoWidget(QWidget *parent, QLabel *label); //форматирование справки о приложении
     void initializePlotWidget(QCustomPlot *plotWidget); //форматирование виджетов с графиками
