@@ -315,6 +315,24 @@
       <height>371</height>
      </rect>
     </property>
+    <widget class="QPushButton" name="clearButton">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>350</y>
+       <width>90</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Очистить</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QPushButton" name="infoButton">
     <property name="geometry">
@@ -379,6 +397,24 @@
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>520</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Пояснение к графикам:&lt;/span&gt;&lt;br/&gt;Красный - u(x) - точное решение ;&lt;br/&gt;Синий - v(x) - численное решение;&lt;br/&gt;Зелёный - v2(x) - численное решение, &lt;br/&gt;полученное с половинным шагом.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

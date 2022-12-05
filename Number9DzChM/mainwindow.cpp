@@ -343,31 +343,36 @@ void MainWindow::on_pushButton_pressed()
                y_max = *max_element(v.begin(), v.end());
 
         QCustomPlot *plot = ui->mainPlot;
-        plot->clearGraphs();
+        //plot->clearGraphs();
 
-        plot->xAxis->setRange(0,x_max);
-        plot->yAxis->setRange(y_min, y_min + x_max);
-
-        plot->legend->setVisible(true);
+        if (graphCount == 0) {
+            plot->xAxis->setRange(0,x_max);
+            plot->yAxis->setRange(y_min, y_min + x_max);
+            //plot->legend->setVisible(true);
+        }
         plot->xAxis->setLabel("x");
         plot->yAxis->setLabel("u");
 
         plot->addGraph();
-        plot->graph(0)->addData(x, v);
-        plot->graph(0)->setPen(QPen(Qt::blue));
-        plot->graph(0)->setName("Численное решение v(x)");
+        plot->graph(3*graphCount)->addData(x, v);
+        plot->graph(3*graphCount)->setPen(QPen(Qt::blue));
+        if (graphCount == 0)
+            plot->graph(3*graphCount)->setName("Численное решение v(x)");
 
         plot->addGraph();
-        plot->graph(1)->addData(x, v2);
-        plot->graph(1)->setPen(QPen(Qt::green));
-        plot->graph(1)->setName("Численное решение с половинным шагом v2(x)");
+        plot->graph(3*graphCount + 1)->addData(x, v2);
+        plot->graph(3*graphCount + 1)->setPen(QPen(Qt::green));
+        if (graphCount == 0)
+            plot->graph(3*graphCount + 1)->setName("Численное решение с половинным шагом v2(x)");
 
         plot->addGraph();
-        plot->graph(2)->addData(x, u);
-        plot->graph(2)->setPen(QPen(Qt::red));
-        plot->graph(2)->setName("Точное решение u(x)");
+        plot->graph(3*graphCount + 2)->addData(x, u);
+        plot->graph(3*graphCount + 2)->setPen(QPen(Qt::red));
+        if (graphCount == 0)
+            plot->graph(3*graphCount + 2)->setName("Точное решение u(x)");
 
         plot->replot();
+        ++graphCount;
 
         isSolvedOnce = true;
         QString solutionInfoString;
@@ -411,5 +416,14 @@ void MainWindow::on_tableButton_pressed()
         tableInfo->hide();
 
     tableInfo->show();
+}
+
+
+void MainWindow::on_clearButton_pressed()
+{
+    graphCount = 0;
+    ui->mainPlot->clearGraphs();
+    ui->mainPlot->legend->setVisible(false);
+    ui->mainPlot->replot();
 }
 
