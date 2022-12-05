@@ -51,7 +51,11 @@
      <string/>
     </property>
     <property name="pixmap">
+<<<<<<< HEAD
+     <pixmap>:/Resources/Diffeq.png</pixmap>
+=======
      <pixmap resource="Resources.qrc">:/Resources/Diffeq.png</pixmap>
+>>>>>>> a7a0e1b9d63f62df418160488f152a794e46c4b2
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -70,7 +74,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="Resources.qrc">:/Resources/u_0.png</pixmap>
+     <pixmap>:/Resources/u_0.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -89,7 +93,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="Resources.qrc">:/Resources/h.png</pixmap>
+     <pixmap>:/Resources/h.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -128,7 +132,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="Resources.qrc">:/Resources/x_eps.png</pixmap>
+     <pixmap>:/Resources/x_eps.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -147,7 +151,11 @@
      <string/>
     </property>
     <property name="pixmap">
+<<<<<<< HEAD
+     <pixmap>:/Resources/x_max.png</pixmap>
+=======
      <pixmap resource="Resources.qrc">:/Resources/x_max.png</pixmap>
+>>>>>>> a7a0e1b9d63f62df418160488f152a794e46c4b2
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -196,7 +204,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="Resources.qrc">:/Resources/v_eps.png</pixmap>
+     <pixmap>:/Resources/v_eps.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -225,7 +233,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="Resources.qrc">:/Resources/a.png</pixmap>
+     <pixmap>:/Resources/a.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -254,7 +262,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="Resources.qrc">:/Resources/teta.png</pixmap>
+     <pixmap>:/Resources/teta.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -393,7 +401,11 @@
      <string/>
     </property>
     <property name="pixmap">
+<<<<<<< HEAD
+     <pixmap>:/Resources/Nmax.png</pixmap>
+=======
      <pixmap resource="Resources.qrc">:/Resources/Nmax.png</pixmap>
+>>>>>>> a7a0e1b9d63f62df418160488f152a794e46c4b2
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -402,10 +414,17 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
+<<<<<<< HEAD
+      <x>23</x>
+      <y>510</y>
+      <width>241</width>
+      <height>131</height>
+=======
       <x>20</x>
       <y>520</y>
       <width>211</width>
       <height>91</height>
+>>>>>>> a7a0e1b9d63f62df418160488f152a794e46c4b2
      </rect>
     </property>
     <property name="font">
@@ -414,7 +433,11 @@
      </font>
     </property>
     <property name="text">
+<<<<<<< HEAD
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Пояснение к графикам:&lt;/span&gt;&lt;br/&gt;Красный - u(x) - точное решение ;&lt;br/&gt;Синий - v(x) - численное решение;&lt;br/&gt;Зелёный - v2(x) - численное решение, &lt;br/&gt;полученное с половинным шагом.&lt;br/&gt;Графики решений подписаны в формате:&lt;br/&gt;&lt;span style=&quot; color:#55007f;&quot;&gt;(a, ϑ, u0).&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+=======
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Пояснение к графикам:&lt;/span&gt;&lt;br/&gt;Красный - u(x) - точное решение ;&lt;br/&gt;Синий - v(x) - численное решение;&lt;br/&gt;Зелёный - v2(x) - численное решение, &lt;br/&gt;полученное с половинным шагом.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+>>>>>>> a7a0e1b9d63f62df418160488f152a794e46c4b2
     </property>
    </widget>
   </widget>
@@ -438,8 +461,6 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="Resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
